@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Search Web</title>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- Lightbox CSS -->
+    <link rel="stylesheet" href="./node_modules/lightbox2/dist/css/lightbox.css">
+
+    <!-- Glide CSS -->
+    <link rel="stylesheet" href="./node_modules/@glidejs/glide/dist/css/glide.core.min.css">
+
+    <!-- YOUR CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <h1 data-aos="fade-down">FIND YOUR POKEMON</h1>
+
+        <!-- SEARCH -->
+        <div class="search-section" data-aos="fade-up">
+            <input type="text" id="pokemonInput" placeholder="Enter Pokémon name">
+            <button id="searchBtn">Search</button>
+        </div>
+
+        <!-- RESULTS -->
+        <div class="results" id="results"></div>
+
+        <!-- FEATURED -->
+        <h2 data-aos="fade-right">Featured Pokémon</h2>
+
+        <div class="glide" data-aos="zoom-in">
+            <div class="glide__track" data-glide-el="track">
+                <ul class="glide__slides">
+                    <li class="glide__slide">
+                        <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" data-lightbox="featured">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png">
+                        </a>
+                    </li>
+                    <li class="glide__slide">
+                        <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png" data-lightbox="featured">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/6.png">
+                        </a>
+                    </li>
+                    <li class="glide__slide">
+                        <a href="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png" data-lightbox="featured">
+                            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/150.png">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="glide__arrows" data-glide-el="controls">
+                <button class="glide__arrow" data-glide-dir="<">‹</button>
+                <button class="glide__arrow" data-glide-dir=">">›</button>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- LIBRARIES -->
+    <script src="./node_modules/lightbox2/dist/js/lightbox-plus-jquery.js"></script>
+    <script src="./node_modules/@glidejs/glide/dist/glide.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js/dist/cleave.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- YOUR JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

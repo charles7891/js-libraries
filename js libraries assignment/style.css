@@ -1,0 +1,132 @@
+/* Mobile First Design */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background: url("./images/pokemon\ img.jpeg") no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+
+/* Dark overlay so text is readable */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 5rem;
+}
+
+.search-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+input {
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    padding: 12px;
+    font-size: 16px;
+    background: #ffcb05;
+    color: black;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #f2b807;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Bigger cards */
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Larger Pokémon image */
+.card img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+}
+
+h2 {
+    margin: 40px 0 20px;
+}
+
+/* Glide images bigger */
+.glide__slide img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+}
+
+/* Tablet */
+@media (min-width: 600px) {
+    .search-section {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    input {
+        width: 250px;
+    }
+
+    .results {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .card {
+        max-width: 400px;
+    }
+}

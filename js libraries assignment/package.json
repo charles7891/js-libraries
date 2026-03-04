@@ -1,0 +1,16 @@
+{
+  "name": "js-libraries-assignment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [],
+  "author": "charles",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.7.1",
+    "lightbox2": "2.11.5",
+    "lite-server": "^2.6.1"
+  }
+}
